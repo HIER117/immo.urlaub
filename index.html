@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIER.immo – Immobilienurlaub an der türkischen Ägäis</title>
+  <title>immo.Tours – Immobilienurlaub an der türkischen Ägäis</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!-- PayPal SDK: CLIENT_ID ersetzen -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
   <style>
     :root { --dark-bg:#1c1c1e; --light-text:#f5f5f5; --accent-gold:#d4af37; --accent-red:#c0392b; --muted-gray:#777; }
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin:2; padding:20; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { background:var(--dark-bg); color:var(--light-text); font-family:'Roboto',sans-serif; font-weight:300; line-height:1.5; }
     a { color:var(--accent-gold); text-decoration:none; }
     a:hover { color:var(--accent-red); }
-    .site-header { background:#000; padding:1rem; position:sticky; top:0; z-index:1000; }
+    .site-header { background:#000; padding:0,75rem; position:sticky; top:0; z-index:1000; }
     .navbar { display:flex; justify-content:flex-start; align-items:center; gap:0.25rem; }
-    .logo { font-family:'Montserrat',sans-serif; font-weight:600; font-size:1.75rem; color:var(--accent-gold); margin-right:1rem; }
+    .logo { font-family:'Montserrat',sans-serif; font-weight:600; font-size:1.75rem; color:var(--accent-gold); margin-right:1; }
     .nav-links { display:flex; gap:6px; }
     .nav-links a { font-family:'Montserrat',sans-serif; font-weight:600; text-transform:uppercase; font-size:0.8rem; padding:0 6px; transition:color 0.2s; }
     .nav-links a.active { color:var(--accent-red); }
@@ -24,8 +25,8 @@
     .btn-primary, .btn-primary:visited { background:var(--accent-gold); color:var(--dark-bg); }
     .btn-primary:hover { background:var(--accent-red); color:var(--light-text); }
     .btn-wide { width:100%; }
-    .form-container { background:#2b2b2b; padding:1.5rem; border-radius:8px; }
-    .form-group { margin-bottom:1.25rem; }
+    .form-container { background:#2b2b2b; padding:1,5rem; border-radius:2px; }
+    .form-group { margin-bottom:1rem; }
     label { display:block; margin-bottom:0.5rem; font-family:'Montserrat',sans-serif; font-size:0.9rem; }
     input, select, textarea { width:100%; padding:0.5rem; border:none; border-radius:4px; background:#333; color:var(--light-text); font-size:0.9rem; }
     input:focus, select:focus, textarea:focus { outline:none; box-shadow:0 0 0 2px var(--accent-gold); }
@@ -41,7 +42,7 @@
     section { padding:2rem 1rem; max-width:900px; margin:auto; }
     .fade-in { opacity:0; transform:translateY(20px); transition:0.6s; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
-    details { background:#2b2b2b; border-radius:6px; margin-bottom:1rem; overflow:hidden; }
+    details { background:#2b2b2b; border-radius:15px; margin-bottom:0;rem; overflow:hidden; }
     summary { font-family:'Montserrat',sans-serif; font-weight:600; cursor:pointer; padding:0.75rem 1rem; position:relative; }
     summary::before { content:'▶'; position:absolute; left:1rem; top:50%; transform:translateY(-50%); transition:0.3s; color:var(--accent-gold); }
     details[open] summary::before { transform:translateY(-50%) rotate(90deg); }
@@ -51,8 +52,8 @@
     .timeline-item { display:flex; align-items:flex-start; margin-bottom:0.5rem; }
     .timeline-step { width:1.5rem; height:1.5rem; background:var(--accent-red); color:var(--light-text); display:flex; align-items:center; justify-content:center; border-radius:50%; margin-right:0.5rem; font-family:'Montserrat',sans-serif; font-size:0.9rem; }
     .hero { text-align:center; }
-    .hero img { max-width:100%; height:auto; border-radius:8px; margin-bottom:1rem; }
-    .hero h1 { font-size:1.8rem; font-family:'Montserrat',sans-serif; margin-bottom:0.5rem; }
+    .hero img { max-width:100%; height:auto; border-radius:800000px; margin-bottom:1rem; }
+    .hero h1 { font-size:8.8rem; font-family:'Montserrat',sans-serif; margin-bottom:0.5rem; }
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:0.5rem; }
     .gallery img { width:100%; border-radius:4px; }
     @media (max-width:600px) {
@@ -65,7 +66,7 @@
 <body>
   <header class="site-header fade-in">
     <nav class="navbar">
-      <div class="logo">HIER.immo</div>
+      <div class="logo">Immo.Tours</div>
       <div class="nav-links">
         <a href="#offer">Angebot</a>
         <a href="#leistungen">Leistungen</a>
@@ -89,15 +90,15 @@
     <details open>
       <summary>Unser Angebot</summary>
       <p>● OHNE Kaufverpflichtung ●</p>
-      <p>Erlebe Traumimmobilien an der türkischen Ägäis: 4 Tage Kurzurlaub mit Besichtigung, Bootstour, Transfer & Betreuung.</p>
+      <p>Erlebe Traumimmobilien an der türkischen Ägäis: 4 Tage Kurzurlaub mit Besichtigung, Bootstour, Transfer & Betreuung.</p>
       <ul>
-        <li>4 Tage Kurzurlaub in Çeşme & Didim</li>
+        <li>4 Tage Kurzurlaub in Çeşme & Didim</li>
         <li>Übernachtung mit Frühstück</li>
         <li>Geführte Rundfahrten (Deutschsprachige Betreuung)</li>
         <li>Bootstour & Strandzeit</li>
-        <li>Flughafentransfer Izmir ← Pension</li>
+        <li>Flughafentransfer Izmir ← Pension</li>
       </ul>
-      <p><strong>ab 399 € p.P. | Familienfreundlich</strong></p>
+      <p><strong>399 € p.P. | Familienfreundlich</strong></p>
     </details>
   </section>
 
@@ -161,11 +162,10 @@
     </details>
   </section>
 
-
   <section id="ablauf" class="fade-in">
     <details>
       <summary>Ablauf</summary>
-      <ul class="timeline">
+<ul class="timeline">
   <li class="timeline-item">
     <div class="timeline-step">1</div>
     <div class="timeline-content">
@@ -245,7 +245,7 @@
   <!-- Didim -->
   <div class="gallery-item Didim">
     <strong>Didim</strong>
-    <img src="didim/didim1.jpg" alt="Didim" style="width:100%;border-radius:6px;">
+    <img src="didim/didim1.jpg" alt="Ferienhaus 1" style="width:100%;border-radius:6px;">
     <img src="didim/didim2.jpg" alt="Didim" style="width:100%;border-radius:6px; margin-top:0.5rem;">
     <img src="didim/didim3.jpg" alt="Didim" style="width:100%;border-radius:6px; margin-top:0.5rem;">
     <img src="didim/didim4.jpg" alt="Didim" style="width:100%;border-radius:6px; margin-top:0.5rem;">
@@ -276,54 +276,67 @@
 
   
 
-  <section id="kontakt" class="fade-in">
+<!-- Kontakt & Buchung -->
+<section id="kontakt" class="fade-in">
   <details open>
     <summary>Kontakt &amp; Buchung</summary>
-    <form onsubmit="return submitMailto(this)" class="form-container">
+    <form id="booking-form" onsubmit="return submitMailto(this)" class="form-container">
+      <!-- 1. Wunschtermin -->
       <div class="form-group">
         <label for="date">Wunschtermin</label>
-        <input type="date" id="date" name="date" min="2025-08-01" value="2025-08-01">
+        <input type="date" id="date" name="date" min="2025-08-01" value="2025-08-01" required>
       </div>
-
-      <div class="form-group checkbox-label">
-        <input type="checkbox" id="pension" name="pension" onchange="updatePrice()">
-        <label for="pension">Pension</label>
-        <span class="text-muted">120 €/Tag</span>
-      </div>
-
+      <!-- 2. Anzahl Personen -->
       <div class="form-group">
-        <label>Anzahl Tage</label>
-        <div class="day-links" id="day-links"></div>
-        <input type="hidden" id="tage_pension" name="tage_pension" value="4">
-      </div>
-
-      <div class="form-group">
-        <label for="personen">Anzahl Personen</label>
-        <select id="personen" name="personen">
+        <label for="personen">Anzahl Personen <small>(ab 3 Rabatt!)</small></label>
+        <select id="personen" name="personen" onchange="onPersonsChange()">
           <option value="1">1 Person</option>
           <option value="2">2 Personen</option>
           <option value="3">3 Personen</option>
           <option value="4">4 Personen</option>
         </select>
       </div>
-
-      <div class="form-group">
-        <p id="preis-anzeige" class="preis-highlight">Gesamtpreis: 399 €</p>
+      <!-- 3. Pension -->
+      <div class="form-group checkbox-label">
+        <input type="checkbox" id="pension" name="pension" onchange="updatePrice()">
+        <label for="pension">Pension (120 €/Tag)</label>
       </div>
+      <!-- 4. Anzahl Tage -->
+      <div class="form-group">
+        <label>Anzahl Tage</label>
+        <div class="day-links" id="day-links"></div>
+        <input type="hidden" id="tage_pension" name="tage_pension" value="4">
+      </div>
+      <!-- 5. AGB -->
+      <div class="form-group checkbox-label">
+        <input type="checkbox" id="agb" name="agb" required>
+        <label for="agb">Ich akzeptiere die <a href="#datenschutz" target="_blank">AGB</a> *</label>
+      </div>
+      <!-- 6. Gesamtpreis -->
+<div class="form-group">
+  <p id="preis-anzeige" class="preis-highlight">Gesamtpreis: 399 €</p>
+  <p id="rabatt-hinweis" class="rabatt-hinweis" style="font-size: 0.9em; color: #666;"></p>
+</div>
 
-      <button type="submit" class="btn btn-primary btn-wide">
-        Jetzt Kontakt &amp; Buchung
-      </button>
+      <!-- 7. Button -->
+      <button type="submit" class="btn btn-primary btn-wide">Jetzt Kontakt &amp; Buchung</button>
     </form>
+  </details>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- FAQ unter Kontakt -->
+<section id="kontakt" class="fade-in">
     <details>
       <summary>FAQ: Zahlung</summary>
       <p>Die Zahlung erfolgt bequem über PayPal. Nach dem Klick auf "Jetzt mit PayPal zahlen" wirst du sicher weitergeleitet. Sobald die Transaktion abgeschlossen ist, erhältst du eine Bestätigung per E‑Mail.</p>
     </details>
     <details>
       <summary>FAQ: Rückerstattung</summary>
-      <p>Solltest du stornieren müssen, kontaktiere uns bitte innerhalb von 14 Tagen nach Buchung per E‑Mail. Wir kümmern uns um eine schnellstmögliche Rückerstattung.</p>
+      <p>Sollten Sie stornieren müssen, kontaktiere uns bitte innerhalb von 14 Tagen nach Buchung per E‑Mail. Wir kümmern uns um eine schnellstmögliche Rückerstattung.</p>
     </details>
 </section>
 
@@ -358,10 +371,10 @@
     const secs = document.querySelectorAll('section[id]'), navs = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => { let cur=''; secs.forEach(s=>{ if(window.scrollY>=s.offsetTop-80)cur=s.id;}); navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur)); });
     navs.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);document.getElementById(id).scrollIntoView({behavior:'smooth'});const d=document.getElementById(id).querySelector('details'); if(d){document.querySelectorAll('details').forEach(x=>x.open=false);d.open=true;}}));
-    const dayLinksContainer=document.getElementById('day-links'); for(let i=1;i<=7;i++){const a=document.createElement('a');a.textContent=i+' Tag'+(i>1?'e':'');a.href='#';a.dataset.days=i;if(i===4)a.classList.add('active-day');a.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.day-links a').forEach(x=>x.classList.remove('active-day'));a.classList.add('active-day');document.getElementById('tage_pension').value=i;updatePrice();});dayLinksContainer.append(a);}  
-    paypal.Buttons({createOrder:(d,a)=>{const preis=parseFloat(document.getElementById('preis-anzeige').textContent.replace(/[^0-9,\.]/g,'').replace(',','.'))||399;return a.order.create({purchase_units:[{amount:{value:preis.toFixed(2)}}]});},onApprove:(d,a)=>a.order.capture().then(details=>{alert(`Danke, ${details.payer.name.given_name}! Zahlung über ${details.purchase_units[0].amount.value} € erfolgreich.`);})}).render('#paypal-button-container');
+    const dayLinksContainer=document.getElementById('day-links'); for(let i=1;i<=7;i++){const a=document.createElement('a');a.textContent=i+' Tag'+(i>1?'e':'');a.href='#';a.dataset.days=i;if(i===4)a.classList.add('active-day');a.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.day-links a').forEach(x=>x.classList.remove('active-day'));a.classList.add('active-day');document.getElementById('tage_pension').value=i;updatePrice();});dayLinksContainer.append(a);}  
+    paypal.Buttons({createOrder:(d,a)=>{const preis=parseFloat(document.getElementById('preis-anzeige').textContent.replace(/[^0-9,\.]/g,'').replace(',','.'))||399;return a.order.create({purchase_units:[{amount:{value:preis.toFixed(2)}}]});},onApprove:(d,a)=>a.order.capture().then(details=>{alert(`Danke, ${details.payer.name.given_name}! Zahlung über ${details.purchase_units[0].amount.value} € erfolgreich.`);})}).render('#paypal-button-container');
   });
-  function updatePrice(){const b=399,t=parseInt(document.getElementById('tage_pension').value,10)||0,p=document.getElementById('pension').checked?120*t:0,o=parseInt(document.getElementById('personen').value,10)||1;document.getElementById('preis-anzeige').textContent=`Gesamtpreis: ${b*o+p} €`;}  
+  function updatePrice(){const b=399,t=parseInt(document.getElementById('tage_pension').value,10)||0,p=document.getElementById('pension').checked?120*t:0,o=parseInt(document.getElementById('personen').value,10)||1;document.getElementById('preis-anzeige').textContent=`Gesamtpreis: ${b*o+p} €`;}  
   function submitMailto(f){updatePrice();const d=f.date.value,T=f.tage_pension.value,P=f.personen.value,C=f.pension.checked?'Ja':'Nein',G=document.getElementById('preis-anzeige').textContent,B=`Wunschtermin: ${d}\nTage: ${T}\nPersonen: ${P}\nPension: ${C}\n${G}`;window.location.href=`mailto:kontakt@hier.immo?subject=Anfrage Immobilienreise&body=${encodeURIComponent(B)}`;return false;}  
   </script>
 </body>
