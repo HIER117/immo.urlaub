@@ -315,7 +315,7 @@
 
   <section id="impressum">
     <h2>Impressum</h2>
-    <p>HIER.immo GmbH<br>Reinmarplatz, 80637 München, Deutschland</p>
+    <p>immotours-Türkei<br>Neuhausen, 80637 München, Deutschland</p>
   </section>
 
   <section id="datenschutz">
@@ -329,7 +329,7 @@
       const p = form.personen.value;
       const pension = form.pension.checked ? "Ja" : "Nein";
       const msg = `Wunschtermin: ${d}\nPersonen: ${p}\nPension: ${pension}`;
-      window.location.href = `mailto:kontakt@hier.immo?subject=Anfrage Immobilienreise&body=${encodeURIComponent(msg)}`;
+      window.location.href = `mailto:kontakt@immotours-tuerkei.de?subject=Anfrage Immobilienreise&body=${encodeURIComponent(msg)}`;
       return false;
     }
 
@@ -348,5 +348,11 @@
       }
     }).render('#paypal-button-container');
   </script>
+  <section id="impressum">
+  <h2>Impressum</h2>
+  <p>HIER.immo GmbH<br>Neuhausen, 80637 München, Deutschland</p>
+  <p>E-Mail: <a href="mailto:info@immotours-tuerkei.de">info@immotours-tuerkei.de</a></p>
+</section>
+
 </body>
 </html>
