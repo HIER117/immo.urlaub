@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -164,6 +166,324 @@
   letter-spacing: 0.5px;
 }
 
+    #kontakt {
+  background-color: #2a2a2c;
+  border: 1px solid var(--accent-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  margin-bottom: 3rem;
+}
+
+#kontakt h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+  position: relative;
+}
+
+#kontakt h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 0.5rem auto;
+}
+
+#kontakt form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--light-text);
+}
+
+#kontakt input[type="date"],
+#kontakt select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
+}
+
+#kontakt label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.3rem;
+}
+
+#kontakt input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+#kontakt .btn-primary {
+  align-self: flex-start;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+	
+#kontakt label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+/* Für Checkbox-spezifische Gruppen */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-gold);
+}
+#kontakt label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.checkbox-group a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-gold);
+}
+#kontakt form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #222;
+  border: 1px solid var(--accent-gold);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+#kontakt h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+#kontakt h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--light-text);
+}
+
+input[type="date"],
+select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-gold);
+}
+
+.btn.btn-primary {
+  align-self: center;
+  background-color: var(--accent-gold);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #d4aa00;
+}
+
+:root {
+  --accent-gold: #e0b528;
+  --dark-bg: #1e1e1e;
+  --light-text: #f0f0f0;
+}
+
+#kontakt {
+  padding: 2rem 1rem;
+  color: var(--light-text);
+  background-color: var(--dark-bg);
+}
+
+#kontakt h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#kontakt h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+#kontakt form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  border: 1px solid var(--accent-gold);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--light-text);
+  font-size: 1rem;
+}
+
+input[type="date"],
+select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent-gold);
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  margin: 0;
+}
+
+.checkbox-group a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+.btn.btn-primary {
+  align-self: center;
+  background-color: var(--accent-gold);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #d4aa00;
+}
+
+/* 🔁 Responsiveness */
+@media (max-width: 600px) {
+  #kontakt form {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .form-group {
+    font-size: 0.95rem;
+  }
+
+  .btn.btn-primary {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
   </style>
 </head>
 
@@ -303,28 +623,35 @@
     </details>
   </section>
 
-  <section id="kontakt">
-    <h2>Kontakt & Buchung</h2>
-    <form onsubmit="return submitMailto(this)">
-      <label>Wunschtermin:
-        <input type="date" name="date" required />
-      </label><br><br>
-      <label>Anzahl Personen:
-        <select name="personen">
-          <option>1</option><option>2</option><option>3</option><option>4</option>
-        </select>
-      </label><br><br>
-      <label><input type="checkbox" name="pension" /> Pension dazubuchen (120 €/Tag)</label><br><br>
-      <label>
-  <input type="checkbox" name="agb" required />
-  Ich akzeptiere die <a href="https://HIER117.github.io/urlaub-immo/agb.html" target="_blank" style="color:#d4af37; text-decoration:underline; font-weight:bold;">AGB</a>
-</label>
+<section id="kontakt">
+  <h2>Kontakt & Buchung</h2>
+  <form onsubmit="return submitMailto(this)">
+    <div class="form-group">
+      <label for="date">Wunschtermin:</label>
+      <input type="date" name="date" id="date" required />
+    </div>
 
-<br><br>
-      <button class="btn btn-primary">Jetzt Kontakt aufnehmen</button>
-    </form>
-    <div id="paypal-button-container"></div>
-  </section>
+    <div class="form-group">
+      <label for="personen">Anzahl Personen:</label>
+      <select name="personen" id="personen">
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+      </select>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input type="checkbox" name="pension" id="pension">
+      <label for="pension">Pension dazubuchen (120 €/Tag)</label>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input type="checkbox" name="agb" id="agb" required>
+      <label for="agb">Ich akzeptiere die <a href="https://HIER117.github.io/urlaub-immo/agb.html" target="_blank">AGB</a></label>
+    </div>
+
+    <button class="btn btn-primary">Jetzt Kontakt aufnehmen</button>
+  </form>
+</section>
+
 
   <section id="datenschutz">
     <h2>Datenschutz</h2>
