@@ -565,15 +565,80 @@ input[type="checkbox"] {
     </div>
   </section>
 
-  <section id="ablauf">
-    <h2>Ablauf</h2>
-    <ol>
-      <li><strong>Tag 1:</strong> Ankunft & gemeinsames Abendessen</li>
-      <li><strong>Tag 2:</strong> Immobilien in Çeşme & Bootstour</li>
-      <li><strong>Tag 3:</strong> Strandtag & Rundgang in Didim</li>
-      <li><strong>Tag 4:</strong> Rückflug & individuelle Beratung</li>
-    </ol>
-  </section>
+  <section id="ablauf" style="background-color: #2a2a2a; padding: 4rem 1rem; border-top: 2px solid var(--accent-gold); border-bottom: 2px solid var(--accent-gold);">
+  <h2 style="text-align: center; font-size: 2rem; color: var(--accent-gold); margin-bottom: 2rem;">
+    Ablauf
+    <span style="display:block; width:60px; height:3px; background-color:var(--accent-gold); margin:0.5rem auto 0; border-radius:2px;"></span>
+  </h2>
+
+  <div class="ablauf-wrapper" style="max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 1.5rem;">
+    
+    <!-- Einzelner Tag -->
+    <div class="ablauf-tag" style="background:#1e1e1e; border-left: 4px solid var(--accent-gold); border-radius: 8px; padding:1rem 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+      <div class="ablauf-header" style="font-size:1.2rem; font-weight:600; color: var(--light-text); cursor: default;">📍 Tag 1: Ankunft & gemeinsames Abendessen</div>
+      <div class="ablauf-body" style="margin-top: 0.5rem;">Du wirst am Flughafen abgeholt und mit den anderen Teilnehmenden beim Willkommens-Dinner empfangen.</div>
+    </div>
+
+    <div class="ablauf-tag hover-toggle">
+      <div class="ablauf-header">🏘️ Tag 2: Immobilien in Çeşme & Bootstour</div>
+      <div class="ablauf-body">Wir besuchen exklusive Objekte in Çeşme. Am Nachmittag entspannst du bei einer privaten Bootstour.</div>
+    </div>
+
+    <div class="ablauf-tag hover-toggle">
+      <div class="ablauf-header">🌴 Tag 3: Strandtag & Rundgang in Didim</div>
+      <div class="ablauf-body">Ein entspannter Tag am Meer – danach geführte Besichtigung durch Didims Altstadt und Umgebung.</div>
+    </div>
+
+    <div class="ablauf-tag hover-toggle">
+      <div class="ablauf-header">🛫 Tag 4: Rückflug & individuelle Beratung</div>
+      <div class="ablauf-body">Vor dem Rückflug: Persönliche Beratung & Unterlagen für dein Wunschobjekt. Transfer zum Flughafen inklusive.</div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .ablauf-tag {
+    background: #1e1e1e;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .ablauf-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--light-text);
+    cursor: pointer;
+  }
+
+  .ablauf-body {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .hover-toggle:hover .ablauf-body {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    /* Für Mobile: Inhalte immer sichtbar */
+    .ablauf-body {
+      max-height: none !important;
+      opacity: 1 !important;
+    }
+  }
+</style>
+
 
  
   </section>
