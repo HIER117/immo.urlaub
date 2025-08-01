@@ -483,13 +483,51 @@ input[type="checkbox"] {
     font-size: 1rem;
   }
 }
+ form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: sans-serif;
+  }
 
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #006ad1;
+  }
   </style>
 </head>
 
 <body>
 
-	<form action="https://formspree.io/f/mblkkejo?redirect=https://www.immotours-tuerkei.de/danke.html" method="POST">
+  <form action="https://formspree.io/f/mblkkejo?redirect=https://www.immotours-tuerkei.de/danke.html" method="POST">
   <label for="name">Ihr Name:</label>
   <input type="text" id="name" name="Name" required>
 
