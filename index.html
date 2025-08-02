@@ -711,7 +711,7 @@ input[type="checkbox"] {
 
 <section id="kontakt">
   <h2>Kontakt & Buchung</h2>
-  <form onsubmit="return submitMailto(this)">
+  <form action="https://formspree.io/f/DEIN_ENDPOINT" method="POST">
     <div class="form-group">
       <label for="date">Wunschtermin:</label>
       <input type="date" name="date" id="date" required />
@@ -731,12 +731,18 @@ input[type="checkbox"] {
 
     <div class="form-group checkbox-group">
       <input type="checkbox" name="agb" id="agb" required>
-      <label for="agb">Ich akzeptiere die <a href="https://HIER117.github.io/urlaub-immo/agb.html" target="_blank">AGB</a></label>
+      <label for="agb">
+        Ich akzeptiere die <a href="https://HIER117.github.io/urlaub-immo/agb.html" target="_blank">AGB</a>
+      </label>
     </div>
 
-    <button class="btn btn-primary">Jetzt Kontakt aufnehmen</button>
+    <!-- Optional: Weiterleitung nach Absenden -->
+    <input type="hidden" name="_redirect" value="https://www.immotours-tuerkei.de/danke.html" />
+
+    <button class="btn btn-primary" type="submit">Jetzt Kontakt aufnehmen</button>
   </form>
 </section>
+
 
   <script>
     function submitMailto(form) {
