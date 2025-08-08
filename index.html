@@ -538,7 +538,7 @@ input[type="checkbox"] {
       </ul>
 
       <p style="margin-top: 2rem; font-size: 1.4rem; text-align: center;">
-        <strong style="color: var(--accent-gold); font-size: 2rem;">399 € p.P.</strong><br>
+        <strong style="color: var(--accent-gold); font-size: 2rem;">396 € p.P.</strong><br>
         <span style="color: var(--muted-gray); font-size: 1rem;">Familienfreundlich & flexibel buchbar</span>
       </p>
 
@@ -728,35 +728,6 @@ input[type="checkbox"] {
     </a>
   </div>
 </section>
-
-
-  
-
-  <script>
-    function submitMailto(form) {
-      const d = form.date.value;
-      const p = form.personen.value;
-      const pension = form.pension.checked ? "Ja" : "Nein";
-      const msg = `Wunschtermin: ${d}\nPersonen: ${p}\nPension: ${pension}`;
-      window.location.href = `mailto:kontakt@immotours-tuerkei.de?subject=Anfrage Immobilienreise&body=${encodeURIComponent(msg)}`;
-      return false;
-    }
-
-    paypal.Buttons({
-      createOrder: (data, actions) => {
-        return actions.order.create({
-          purchase_units: [{
-            amount: { value: '399.00' }
-          }]
-        });
-      },
-      onApprove: (data, actions) => {
-        return actions.order.capture().then(function(details) {
-          alert('Danke, ' + details.payer.name.given_name + '! Zahlung erfolgreich.');
-        });
-      }
-    }).render('#paypal-button-container');
-  </script>
 <footer style="background:#111; color:#ccc; text-align:center; padding:2rem; font-size:0.9rem;">
   <p>© 2025 HIER.immo GmbH – Immobilienurlaub in der Türkei</p>
   <p>Standort: Neuhausen, München</p>
