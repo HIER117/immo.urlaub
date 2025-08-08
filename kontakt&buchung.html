@@ -8,6 +8,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="author" content="HIER.immo GmbH" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     :root {
       --dark-bg: #1c1c1e;
@@ -40,30 +41,50 @@
     #kontakt {
       width: 100%;
       max-width: 700px;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
     .form-container {
       background: #2b2b2b;
-      padding: 1.5rem;
-      border-radius: 8px;
+      padding: 2rem;
+      border-radius: 16px;
       margin: 0 auto;
+      box-shadow: 0 0 20px rgba(212,175,55,0.15);
+      border: 1px solid var(--accent-gold);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .form-container:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 30px rgba(212,175,55,0.3);
     }
     .form-group {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
     label {
-      display: block;
+      display: flex;
+      align-items: center;
       margin-bottom: 0.5rem;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+    }
+    .material-symbols-outlined {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      color: var(--accent-gold);
     }
     input, select {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       background: #333;
       color: var(--light-text);
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    input:focus, select:focus {
+      background: #444;
+      outline: 1px solid var(--accent-gold);
     }
     input[type="checkbox"] {
       width: 1.2rem;
@@ -74,20 +95,30 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-size: 0.9rem;
     }
     .btn {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.9rem;
       background: var(--accent-gold);
       color: var(--dark-bg);
       border: none;
       border-radius: 25px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+      box-shadow: 0 0 8px rgba(212,175,55,0.3);
     }
     .btn:hover {
       background: var(--accent-red);
       color: var(--light-text);
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
     .preis-highlight {
       font-size: 1.2rem;
@@ -106,6 +137,11 @@
       color: var(--light-text);
       text-decoration: none;
       font-size: 0.9rem;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .day-links a:hover {
+      background: #444;
     }
     .day-links a.active-day {
       background: var(--accent-gold);
@@ -119,33 +155,72 @@
       font-size: 0.9rem;
       width: 100%;
     }
+    footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: var(--light-text);
+      text-decoration: underline;
+    }
+    .intro-text {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--muted-gray);
+    }
+    dialog {
+      border: none;
+      border-radius: 12px;
+      padding: 2rem;
+      background: #2b2b2b;
+      color: var(--light-text);
+      max-width: 600px;
+      margin: auto;
+    }
+    dialog::backdrop {
+      background: rgba(0,0,0,0.7);
+    }
+    .dialog-close {
+      margin-top: 1rem;
+      background: var(--accent-gold);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
 <section id="kontakt">
   <h1>Kontakt & Buchung</h1>
-  <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="form-container" id="buchungsformular">
-    <h2>Ihr Wunschtermin für den Immobilienurlaub</h2>
-
+  <p class="intro-text">Jetzt Wunschtermin wählen und unvergesslichen Immobilienurlaub starten.</p>
+  <form action="#" method="POST" class="form-container">
     <div class="form-group">
-      <label for="date">Wunschtermin</label>
-      <input type="date" id="date" name="date" min="2025-08-01" value="2025-08-01" required />
+      <label for="date"><span class="material-symbols-outlined">event</span> Wunschtermin</label>
+      <input type="date" id="date" name="date" required />
     </div>
 
     <div class="form-group checkbox-label">
-      <input type="checkbox" id="pension" name="pension" onchange="updatePrice()" />
+      <input type="checkbox" id="pension" name="pension" />
       <label for="pension">Pension gewünscht (120 €/Tag)</label>
     </div>
 
     <div class="form-group">
-      <label>Anzahl Tage</label>
-      <div class="day-links" id="day-links"></div>
-      <input type="hidden" id="tage_pension" name="tage_pension" value="4" />
+      <label><span class="material-symbols-outlined">calendar_month</span> Anzahl Tage</label>
+      <div class="day-links">
+        <a href="#" class="active-day" data-tage="4">4 Tage</a>
+        <a href="#" data-tage="5">5 Tage</a>
+        <a href="#" data-tage="6">6 Tage</a>
+        <a href="#" data-tage="7">7 Tage</a>
+      </div>
+      <input type="hidden" name="tage" id="tageInput" value="4" />
     </div>
 
     <div class="form-group">
-      <label for="personen">Anzahl Personen</label>
+      <label for="personen"><span class="material-symbols-outlined">group</span> Personen</label>
       <select id="personen" name="personen">
         <option value="1">1 Person</option>
         <option value="2">2 Personen</option>
@@ -153,72 +228,66 @@
         <option value="4">4 Personen</option>
       </select>
     </div>
+
     <div class="form-group checkbox-label">
-  <input type="checkbox" id="agb" name="agb" required>
-  <label for="agb">
-    Ich akzeptiere die <a href="agb.html" target="_blank" style="color:#d4af37;">Allgemeinen Geschäftsbedingungen (AGB)</a>.
-  </label>
-</div>
-
-
-    <div class="form-group">
-      <p id="preis-anzeige" class="preis-highlight">Gesamtpreis: 399 €</p>
+      <input type="checkbox" id="agb" name="agb" required />
+      <label for="agb">Ich akzeptiere die <a href="#" onclick="document.getElementById('agbDialog').showModal(); return false;" style="color:var(--accent-gold);">AGB</a></label>
     </div>
 
-    <button type="submit" class="btn">Jetzt Kontakt & Buchung</button>
+    <div class="form-group">
+      <p class="preis-highlight" id="gesamtpreis">Gesamtpreis: 396 €</p>
+    </div>
+
+    <button type="submit" class="btn">
+      <span class="material-symbols-outlined">send</span>
+      Jetzt buchen
+    </button>
   </form>
 </section>
+
+<dialog id="agbDialog">
+  <h2>AGB</h2>
+  <p>Hier stehen die Allgemeinen Geschäftsbedingungen. Sie erklären hiermit Ihr Einverständnis mit unseren Konditionen für den Immobilienurlaub.</p>
+  <button onclick="document.getElementById('agbDialog').close();" class="dialog-close">Schließen</button>
+</dialog>
 
 <footer>
   <p>© 2025 HIER.immo GmbH – Immobilienurlaub in der Türkei</p>
   <p>Standort: Neuhausen, München</p>
-  <p><a href="https://HIER117.github.io/urlaub-immo/impressum" target="_blank">Impressum</a> | 
-     <a href="https://HIER117.github.io/urlaub-immo/Datenschutz.html" target="_blank">Datenschutz</a>
-  </p>
+  <p><a href="https://HIER117.github.io/urlaub-immo/impressum" target="_blank">Impressum</a> |
+    <a href="https://HIER117.github.io/urlaub-immo/Datenschutz.html" target="_blank">Datenschutz</a></p>
 </footer>
 
 <script>
-  const dayLinks = document.getElementById("day-links");
-  const tageInput = document.getElementById("tage_pension");
-  const preisAnzeige = document.getElementById("preis-anzeige");
+  const dayLinks = document.querySelectorAll(".day-links a");
+  const tageInput = document.getElementById("tageInput");
+  const pensionCheckbox = document.getElementById("pension");
+  const preisOutput = document.getElementById("gesamtpreis");
 
-  const tageWerte = [2, 3, 4, 5, 6, 7];
-  let selectedTage = 4;
-
-  function updatePreisAnzeige() {
-    const mitPension = document.getElementById("pension").checked;
-    const grundpreis = 399;
-    const tagespreis = 120;
-    let gesamt = grundpreis;
-
-    if (mitPension) {
-      gesamt += selectedTage * tagespreis;
+  function berechnePreis() {
+    const tage = parseInt(tageInput.value);
+    const pension = pensionCheckbox.checked;
+    const grundpreisProTag = 99;
+    const pensionProTag = 120;
+    let gesamt = tage * grundpreisProTag;
+    if (pension) {
+      gesamt += tage * pensionProTag;
     }
-
-    preisAnzeige.textContent = `Gesamtpreis: ${gesamt.toLocaleString("de-DE")} €`;
+    preisOutput.textContent = `Gesamtpreis: ${gesamt} €`;
   }
 
-  function updatePrice() {
-    updatePreisAnzeige();
-  }
-
-  tageWerte.forEach(tage => {
-    const link = document.createElement("a");
-    link.href = "#";
-    link.textContent = `${tage} Tage`;
+  dayLinks.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      selectedTage = tage;
-      tageInput.value = tage;
-      document.querySelectorAll(".day-links a").forEach(a => a.classList.remove("active-day"));
+      dayLinks.forEach(l => l.classList.remove("active-day"));
       link.classList.add("active-day");
-      updatePreisAnzeige();
+      tageInput.value = link.dataset.tage;
+      berechnePreis();
     });
-    if (tage === selectedTage) link.classList.add("active-day");
-    dayLinks.appendChild(link);
   });
 
-  updatePreisAnzeige();
+  pensionCheckbox.addEventListener("change", berechnePreis);
+  document.addEventListener("DOMContentLoaded", berechnePreis);
 </script>
 
 </body>
