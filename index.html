@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -709,40 +711,26 @@ input[type="checkbox"] {
     </details>
   </section>
 
-<section id="kontakt">
-  <h2>Kontakt & Buchung</h2>
-  <form action="https://formspree.io/f/DEIN_ENDPOINT" method="POST">
-    <div class="form-group">
-      <label for="date">Wunschtermin:</label>
-      <input type="date" name="date" id="date" required />
-    </div>
-
-    <div class="form-group">
-      <label for="personen">Anzahl Personen:</label>
-      <select name="personen" id="personen">
-        <option>1</option><option>2</option><option>3</option><option>4</option>
-      </select>
-    </div>
-
-    <div class="form-group checkbox-group">
-      <input type="checkbox" name="pension" id="pension">
-      <label for="pension">Pension dazubuchen (120 €/Tag)</label>
-    </div>
-
-    <div class="form-group checkbox-group">
-      <input type="checkbox" name="agb" id="agb" required>
-      <label for="agb">
-        Ich akzeptiere die <a href="https://HIER117.github.io/urlaub-immo/agb.html" target="_blank">AGB</a>
-      </label>
-    </div>
-
-    <!-- Optional: Weiterleitung nach Absenden -->
-    <input type="hidden" name="_redirect" value="https://www.immotours-tuerkei.de/danke.html" />
-
-    <button class="btn btn-primary" type="submit">Jetzt Kontakt aufnehmen</button>
-  </form>
+<section id="kontakt" style="background-color:#2a2a2c; padding:3rem 1rem; border-top:2px solid var(--accent-gold); border-bottom:2px solid var(--accent-gold);">
+  <div style="max-width:600px; margin:auto; text-align:center; padding:2rem; background-color:#1e1e1e; border-radius:1rem; box-shadow:0 0 20px rgba(212,175,55,0.2); border:1px solid var(--accent-gold);">
+    
+    <h2 style="font-size:2rem; color:var(--accent-gold); margin-bottom:1.5rem; position:relative;">
+      Kontakt & Buchung
+      <span style="display:block; width:60px; height:3px; background-color:var(--accent-gold); margin:0.5rem auto 0; border-radius:2px;"></span>
+    </h2>
+    
+    <p style="color:var(--light-text); font-size:1.1rem; margin-bottom:2rem;">
+      Du möchtest deine Besichtigungstour buchen oder hast Fragen? Starte hier mit wenigen Klicks.
+    </p>
+    
+    <a href="https://HIER117.github.io/urlaub-immo/kontakt&buchung.html" class="btn btn-primary" style="padding: 0.8rem 2rem; font-size: 1rem;">
+      Jetzt Kontakt & Buchung starten
+    </a>
+  </div>
 </section>
 
+
+  
 
   <script>
     function submitMailto(form) {
@@ -777,3 +765,4 @@ input[type="checkbox"] {
 
 </body>
 </html>
+ 
